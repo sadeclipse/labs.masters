@@ -1,0 +1,94 @@
+DOG
+domains
+    name = string
+
+predicates
+    dog(name)
+    parent(name, name)
+
+clauses
+    dog(X) :- parent(X, Y), dog(Y).
+    dog("reks").
+    parent("jek", "reks").
+
+goal
+    dog(Who).
+
+
+
+DOG1
+domains
+    name = string
+
+predicates
+    nondeterm dog(name)
+    nondeterm parent(name, name)
+    nondeterm grandparent(name, name)
+    nondeterm grandchild(name, name)
+
+clauses
+    dog("sally"). dog("boss"). dog("fat"). dog("jim"). 
+    dog("jek"). dog("bek"). dog("reks").
+    
+    parent("sally", "boss").
+    parent("sally", "jim").
+    parent("boss", "jek").
+    parent("boss", "jim").   
+    parent("fat", "bek").
+    parent("fat", "jek").
+    parent("jek", "reks").  
+    parent("bek", "reks").   
+
+    grandparent(X, Z) :- parent(X, Y), parent(Y, Z).
+    grandchild(X, Z) :- grandparent(Z, X).
+
+goal
+  dog(Who).
+
+
+
+FAMILY
+domains
+    name = symbol
+
+predicates
+    parent(name, name)
+    man(name)
+    woman(name)
+    married(name, name)
+    father(name, name)
+    mother(name, name)
+    brother(name, name)
+    sister(name, name)
+    grandfather(name, name)
+    grandmother(name, name)
+    uncle(name, name)
+    aunt(name, name)
+
+clauses
+    man("Aleksey"). man("Vladimir"). man("Valentin"). man("Anatoliy").
+    woman("Stasya"). woman("Valeria"). woman("Lyudmila"). woman("Anna").
+    parent("Aleksey", "Stasya"). parent("Valeria", "Stasya").
+    parent("Vladimir", "Valeria"). parent("Lyudmila", "Valeria").
+    parent("Vladimir", "Valentin"). parent("Lyudmila", "Valentin").
+    parent("Anatoliy", "Aleksey"). parent("Anna", "Aleksey").
+    married("Aleksey", "Valeria").
+    married("Vladimir", "Lyudmila").
+    married("Anatoliy", "Anna").
+    father(X, Y) :- parent(X, Y), man(X).
+    mother(X, Y) :- parent(X, Y), woman(X).
+    brother(X, Y) :- parent(Z, X), parent(Z, Y), man(X), X <> Y, !.
+    sister(X, Y) :- parent(Z, X), parent(Z, Y), woman(X), X <> Y.
+    grandfather(X, Y) :- father(X, Z), parent(Z, Y).
+    grandmother(X, Y) :- mother(X, Z), parent(Z, Y).
+    uncle(X, Y) :- brother(X, Z), parent(Z, Y).
+    aunt(X, Y) :- sister(X, Z), parent(Z, Y).
+
+goal
+    father(Who, "Stasya").
+%    mother(Who, "Stasya").
+%    grandfather(Who, "Stasya").
+%    grandmother(Who, "Stasya").
+%    uncle(Who, "Stasya").
+%    brother(Who, "Valeria").
+%    aunt(Who, "Stasya").  
