@@ -150,27 +150,9 @@ P_4(x)=P_1(4-x),\qquad P_3(x)=P_2(4-x).
 Обозначим
 
 \[
-s(k,j)=\int_0^4N_4(x-k)N_4(x-j)\,dx.
+= \sum_{k=-3}^{3}\sum_{j=-3}^{3}c_kc_j \int_0^4N_4(x-k)N_4(x-j)\,dx = \sum_{k,j}c_kc_js(k,j) = \vec c^{\,T}S\vec c.
 \]
 
-Тогда
-
-\[
-\left\|\sum_{k=-3}^{3}c_kN_4(x-k)\right\|_2^2
-=
-\left(\sum_k c_kN_4(x-k),\sum_j c_jN_4(x-j)\right)
-=
-\]
-
-\[
-=
-\sum_{k=-3}^{3}\sum_{j=-3}^{3}c_kc_j
-\int_0^4N_4(x-k)N_4(x-j)\,dx
-=
-\sum_{k,j}c_kc_js(k,j)
-=
-\vec c^{\,T}S\vec c.
-\]
 
 Здесь \(S\) — матрица с элементами \(s(k,j)\), а \(\vec c\) — вектор-столбец коэффициентов.
 
