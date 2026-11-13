@@ -1,0 +1,524 @@
+                  
+­ 
+
+      
+      «» . ..  ()
+              
+
+                               
+                    2
+            « »
+
+                    : «»
+
+ . 2387                 ..
+                        ..
+
+         ­
+                 2026
+ 
+   ................................................................................................... 3
+  ............................................................................................................. 3
+ ............................................................................................................. 3
+   ...................................................................................... 6
+
+    1.    ................................................... 6
+    2.   ....................................................... 7
+
+       .  - ............................................................................... 7
+       b. DBSCAN ............................................................................................ 9
+       c.   ....................................................... 12
+    3.    .................................................................. 14
+       a.   .......................................................................... 14
+       b.        
+. ..................................................................................................... 16
+       c.    ....................................... 18
+       d.  -   
+   ............................................................ 20
+  ......................................................................................................... 22
+        
+          ,  
+     .
+       
+       1.    
+       2.     :
+       a.  -:     k 
+     .  
+ (k-means++  ).    
+   K-Means   .
+       b. DBSCAN:      k-
+.       .
+       c.  :   
+  .     
+ .      
+ ()
+       3.   
+       a.  
+       b.        
+.
+       c.   
+       d.  -   
+  
+
+       
+             , 
+       ()  
+    .
+        K-Means
+        K-Means ( K-)    
+  .    
+      k .
+
+          ,  .
+     ,  
+        ,  
+  ­ .
+
+             :
+       1.    k;
+       2.    ;
+       3.      ;
+       4.       
+   ,   ;
+       5.       
+.
+        ,   K-Means, 
+        
+.
+            , 
+   .   
+       
+    .
+        DBSCAN
+       DBSCAN ­   ,   
+ .    K-Means,     
+ .
+        DBSCAN   Density-Based Spatial Clustering of
+Applications with Noise,     
+    .
+          :
+       1. eps ­   ;
+       2. min_samples ­     ,
+    .
+                
+:
+       1.   ­     ;
+       2.   ­     , 
+    ;
+       3.   ­      .
+        DBSCAN    
+     .  , 
+   .
+             
+eps  min_samples.    eps   
+    ,     ­  
+ .
+        
+           
+.        
+ ­  ,  
+   .
+          :
+       1.  ­    
+  ,      
+;
+       2.  ­     
+,    .
+            
+.
+             
+       
+.
+
+          :
+       1.   ­    
+  ;
+       2.   ­   
+;
+       3.  ,      .
+             
+  :
+       1. single linkage ­     
+;
+       2. complete linkage ­  ;
+       3. average linkage ­    ;
+       4. Ward linkage ­  ,   
+  .
+
+ 
+
+1.   
+
+       .
+
+     Date  Day.  
+
+ "Sub_Category", "Product",     .
+
+     (19999, 14).   
+
+   .  :
+
+Month             18021
+Year              18021
+Customer_Age      18021
+Age_Group         18021
+Customer_Gender   18021
+Country           18021
+State             18021
+Product_Category  18021
+Order_Quantity    18021
+Unit_Cost         18021
+Unit_Price        18021
+Profit                 18021
+
+Cost                   18021
+
+Revenue                18021
+
+dtype: int64
+
+          .   
+
+       80%  20% .
+
+        ,      , 
+
+    SMOTE-NC.   :
+
+Train  :
+
+Product_Category
+
+Accessories 8950
+
+Bikes         3269
+
+Clothing      2160
+
+Name: count, dtype: int64
+
+Test --  :
+
+Product_Category
+
+Accessories 2238
+
+Bikes             817
+
+Clothing          540
+
+Train  :
+
+Clothing      8950
+
+Accessories 8950
+
+Bikes         8950
+
+Name: count, dtype: int64
+
+ train  : (26850, 86)
+ test: (3595, 86)
+
+       2.   
+       .  -
+             
+ .    2 :    
+,     . 
+ 2-10        1.
+
+                    1 ­    
+         , ,     2.
+ k=2    (0,521),  k=3  k=4   
+0,39,   k5   0,32.   , 
+«»   :     k=4,  
+ .     , k=2.
+
+              
+, ARI, .     2.
+
+                 2 ­    K-Means
+          (k-means++, random, farthest-first)  
+  58 681,87   ARI (0,5704)   (0,5208). 
+,   ,  100%.  
+ :   3,1  k-means++, 3,65  random  5,2 
+farthest-first.   ,  0,011 .  
+  ,      .
+            
+.  20  K-Means   
+ k-means++, random  farthest-first.   
+    ,   n_init=1. 
+  .     
+ ,           .
+                             3 ­   
+            1035  1965. 
+ 0,5208, ARI    0,5807,     
+ .  ARI     0,9997
+( 0,9973),  ARI    0,0002.
+   ,    K-Means 
+,    .
+       b. DBSCAN
+             k-.
+
+                             5 ­  k-
+        min_samples=10     k- 
+    0,1­0,5       5% .
+  eps0,43.     k=5, 10, 20, 40,
+   eps0,37, 0,43, 0,59  0,74.   min_samples, 
+ eps.
+
+          : eps     0,5
+ 2,0  min_samples 5, 10, 20, 40.
+
+                              6 ­  
+            6.   eps
+      67,7% .   eps 
+    (     ).  
+       , 
+  2 ,   2%   15%. 
+eps=0,492  min_samples=20: 2 , 12,5% ,  0,57.
+             
+.        ().
+ 7 ­     
+                        8 ­    
+         ( 20%)   97­100% , 
+      12,5%, ARI    
+   0,996.      DBSCAN :
+ =0,1 ARI  0,88,  =0,2 0,53,  =0,3 0,12,   =0,5  
+ . K-Means  ARI0,95   =0,5. 
+eps   6   74,9% ,  eps1,25    
+ 3,6%.
+       c.  
+              (9
+)  k  2  8.
+                 9 ­    
+        k=2 ward/euclidean, complete/euclidean, average/cityblock,
+average/cosine  complete/cosine    
+(0,52, ARI0,58).  average/euclidean, single/euclidean 
+average/chebyshev  (  0,03%, ARI=0) 
+  , complete/cityblock   0,31  ARI 0,25. 
+   average/cosine (0,854),  ward 0,798. 
+: ward/euclidean, k=2.
+              
+ 10.
+
+               10 ­     
+             130,   
+       (78)     (10).
+  (91)   ,    .
+          .   
+       500  8000 .
+    11.
+
+                                 11 ­ 
+           500  8000   
+   0,01  2­3 .    
+2,0  ward  2,15­2,2  ,      . 
+DBSCAN =1,4 (0,28   8000),  K-Means     n
+(~0,01 ).       
+.
+       3.   
+       a.  
+             
+    : K-Means (k=2),  K-Means (20
+), DBSCAN (eps=0.492, min_samples=20)  
+ (ward/euclidean, k=2).     
+   ,   ,
+    (Accessories, Bikes, Clothing), 
+     (, , 
+).
+
+                 12 ­    
+           12,    :
+        K-Means     .  K0 
+  :   Unit_Price = 22, 
+Unit_Cost = 8,    Order_Quantity = 15.  K1 ­ 
+  :  2295,  1252,  1.
+     : K1  99.6%
+  Bikes,  K0 ­   Accessories (50.4%)  Clothing (49.6%).
+ K-Means    ,   K0 
+K1   (-  ),  
+  K-Means.
+
+        DBSCAN   :  (12.5%), K0 (54%)  K1
+(33.5%).  ­   :   43  (
+34  ), Revenue    1.11  ,
+ ­  Accessories (60.5%).  K1 ­  «»
+Bikes (100%),      1.  K0 ­ Accessories +
+Clothing (47.3%  52.7%).   DBSCAN,   K-Means,  
+ ,       .
+
+           , 
+  K-Means: K0 (65.6%) ­  Accessories + Clothing (50.5%
+/ 49.5%), K1 (34.4%) ­ Bikes (99.9%).
+
+       b.        
+.
+
+          ,   
+    (Product_Category),  
+ .     ,   
+«» ,     
+ :
+
+        ARI (Adjusted Rand Index) ­   .
+    ,      
+.
+
+        NMI (Normalized Mutual Information) ­  
+. ,      
+ .
+
+         (Homogeneity) ­    
+    .
+  (Completeness) ­    
+
+   .
+
+ V-measure ­     
+
+.
+
+ Fowlkes­Mallows ­      
+
+  .
+
+ Purity ­  ,    ,  
+
+  .
+
+      « vs
+
+   »        13.
+
+     13 ­       
+              :
+       K-Means (k=2)  K-Means    
+
+.      , 
+ «»     ,   
+ Accessories  Clothing   .   
+,  ,   K-Means .
+
+             
+.    (0.996)   ,  
+       .
+       DBSCAN    ,   
+12.5% :          
+   .
+
+        ARI  NMI    ( )  K-Means
+    ,    . 
+,    SMOTE-NC  «»
+ ,     .
+
+          ,    
+ .  K-Means   Bikes,   
+ Accessories  Clothing.   K-Means    ,
+ K0  K1   (1031 Bikes  K0, 990 + 975  K1).   
+,     . DBSCAN: 
+  ­ «».    
+ K-Means,  Bikes  .
+
+       c.   
+              
+       
+ t-SNE.        (PCA), t-
+SNE      ,  
+ ,      
+ .        14.
+                        14 ­   t-SNE
+             .   t-SNE 
+        .
+Accessories ()  Bikes ()    ,
+ Clothing ()     .   Accessories
+ Bikes      ,   Clothing,  ,
+   k=2      .
+        K-Means (k=2)  K-Means  (20 )  
+   :   (   , 
+ )  Accessories  Bikes,   ( 
+ ,   )   Clothing. 
+     : K-Means
+«»    (Accessories  Bikes)   , 
+  Clothing.     
+,    .     
+ (   ),  
+ .
+       DBSCAN      ,   K-Means, 
+      ( ).  
+         ­ 
+   .  DBSCAN  
+  ,      
+ (0.571).    «»  ,  
+ ARI    K-Means.
+
+            K-Means:   
+,   .  ,    
+   ,   K-Means,   k=2  
+ .
+
+       d.  -   
+  
+
+         ,       
+  ,   -  
+.     :    Xs
+(3000 ) 20    80%  (). 
+     ,   
+ ARI (Adjusted Rand Index)  ,  
+ .
+
+         ,  ,      
+,          .
+ ARI = 1.0    , 
+  0 ­  .
+                     15 ­   
+          K-Means     
+:  ARI    1.000 
+  0.000.  ,    
+ 80%     .
+    2.0 (std = 0.000).
+       DBSCAN  :  ARI  
+ 0.924,    ­ 0.013.  
+  0.894.    (2.100 ± 0.300).  
+,  DBSCAN   :   20% 
+     min_samples,  
+     .
+         ,  «»  K-Means  
+       1.000 --
+  .  DBSCAN    ~0.91  ~0.94, 
+  .
+           (  , ARI   ): K-
+Means       0.581
+ 0.582 (  ).  DBSCAN    (
+0.505),    0.48  0.53.  ,   DBSCAN 
+   ,    «»    , 
+   .
+
+           ,  ,
+ , Silhouette, ARI/NMI, ARI   ,  
+ . -    ,
+ K-Means     
+     (ARI = 1.000).   
+       . DBSCAN   (ARI =
+0.924),         : 
+        . 
+ ,    DBSCAN  ARI  
+ (0.924),    ,    
+( Bikes  ) .    
+     K-Means  
+,   K-Means   .
+
+       
+                
+: K-Means (  ), DBSCAN 
+ .
+                
+   ,   
+ K-Means  k = 2 (  ),   
+ward/euclidean       
+ . DBSCAN ,   
+     ,   
+ eps  min_samples       .
+

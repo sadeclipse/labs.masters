@@ -1,0 +1,976 @@
+{
+  "dataset": {
+    "n_rows_raw": 70000,
+    "n_rows": 55000,
+    "n_features_raw": 10,
+    "n_features_encoded": 20,
+    "n_duplicates": 15000,
+    "missing_raw": {
+      "longevity_hours": 0,
+      "sillage_score": 0,
+      "top_note_count": 0,
+      "price_usd": 728,
+      "concentration_percent": 0,
+      "fragrance_family": 0,
+      "brand_tier": 3503,
+      "gender_target": 0,
+      "contains_alcohol": 1749,
+      "limited_edition": 0,
+      "perfume_category": 0
+    },
+    "missing_clean": {
+      "longevity_hours": 0,
+      "sillage_score": 0,
+      "top_note_count": 0,
+      "price_usd": 550,
+      "concentration_percent": 0,
+      "fragrance_family": 0,
+      "brand_tier": 2750,
+      "gender_target": 0,
+      "contains_alcohol": 1375,
+      "limited_edition": 0,
+      "perfume_category": 0
+    },
+    "target_counts": {
+      "Eau de Toilette": 22014,
+      "Eau de Parfum": 19254,
+      "Eau de Cologne": 8258,
+      "Perfume Extract": 5474
+    },
+    "pca_evr": [
+      0.29700987611426805,
+      0.10934120946676602
+    ]
+  },
+  "kmeans": [
+    {
+      "k": 2,
+      "inertia": 404186.9111657806,
+      "silhouette": 0.1805688256225716,
+      "ari": 0.38422491282296234,
+      "nmi": 0.4283466282669378
+    },
+    {
+      "k": 3,
+      "inertia": 361024.1511257544,
+      "silhouette": 0.1953542457262066,
+      "ari": 0.31803684776490315,
+      "nmi": 0.33504790906194576
+    },
+    {
+      "k": 4,
+      "inertia": 336002.28822255397,
+      "silhouette": 0.13820566656518207,
+      "ari": 0.32157303562035267,
+      "nmi": 0.4065828110186225
+    },
+    {
+      "k": 5,
+      "inertia": 300395.4099858502,
+      "silhouette": 0.15510604895183633,
+      "ari": 0.2679474452243236,
+      "nmi": 0.34614581414894546
+    },
+    {
+      "k": 6,
+      "inertia": 289067.3773871433,
+      "silhouette": 0.12100373345075438,
+      "ari": 0.2550264146007799,
+      "nmi": 0.33191944764817166
+    },
+    {
+      "k": 7,
+      "inertia": 279065.2196304769,
+      "silhouette": 0.1352979682228148,
+      "ari": 0.1788173864166195,
+      "nmi": 0.3108126150054896
+    },
+    {
+      "k": 8,
+      "inertia": 269763.53646812204,
+      "silhouette": 0.1214624587025454,
+      "ari": 0.24608485142607017,
+      "nmi": 0.3363503235540304
+    },
+    {
+      "k": 9,
+      "inertia": 260632.36954573795,
+      "silhouette": 0.11515350310314727,
+      "ari": 0.19614299292275283,
+      "nmi": 0.33309798193246226
+    },
+    {
+      "k": 10,
+      "inertia": 254679.16014263016,
+      "silhouette": 0.11158684206055687,
+      "ari": 0.18079933217064276,
+      "nmi": 0.3235121499665233
+    }
+  ],
+  "init": [
+    {
+      "init": "k-means++",
+      "seed": 0,
+      "inertia": 337408.7753303491,
+      "silhouette": 0.13840894448405802,
+      "ari": 0.31515479300486354
+    },
+    {
+      "init": "k-means++",
+      "seed": 1,
+      "inertia": 337407.9940524525,
+      "silhouette": 0.13784945195794945,
+      "ari": 0.3122407516025624
+    },
+    {
+      "init": "k-means++",
+      "seed": 2,
+      "inertia": 336002.22340337955,
+      "silhouette": 0.13877846393866208,
+      "ari": 0.3262001195031543
+    },
+    {
+      "init": "k-means++",
+      "seed": 3,
+      "inertia": 346194.06265246705,
+      "silhouette": 0.11224494910424859,
+      "ari": 0.26457312280055645
+    },
+    {
+      "init": "k-means++",
+      "seed": 4,
+      "inertia": 325259.98418425827,
+      "silhouette": 0.2054959711196504,
+      "ari": 0.24678458506522988
+    },
+    {
+      "init": "random",
+      "seed": 0,
+      "inertia": 337408.3043662904,
+      "silhouette": 0.13779116500186064,
+      "ari": 0.31206673754340164
+    },
+    {
+      "init": "random",
+      "seed": 1,
+      "inertia": 336002.3821901183,
+      "silhouette": 0.13880858028186377,
+      "ari": 0.3262688896128296
+    },
+    {
+      "init": "random",
+      "seed": 2,
+      "inertia": 336002.5065893894,
+      "silhouette": 0.13817015694532314,
+      "ari": 0.3212742735501994
+    },
+    {
+      "init": "random",
+      "seed": 3,
+      "inertia": 336002.62033379934,
+      "silhouette": 0.1381836200206772,
+      "ari": 0.32118062922025803
+    },
+    {
+      "init": "random",
+      "seed": 4,
+      "inertia": 336002.42574048525,
+      "silhouette": 0.1381656724832146,
+      "ari": 0.3216245117382483
+    }
+  ],
+  "init_summary": [
+    {
+      "init": "k-means++",
+      "inertia_mean": 336454.60792458133,
+      "inertia_std": 7453.197491446368,
+      "silhouette_mean": 0.1465555561209137,
+      "silhouette_std": 0.03483474188129112,
+      "ari_mean": 0.2929906743952733,
+      "ari_std": 0.035025850455107733
+    },
+    {
+      "init": "random",
+      "inertia_mean": 336283.64784401655,
+      "inertia_std": 628.7021153182413,
+      "silhouette_mean": 0.13822383894658788,
+      "silhouette_std": 0.0003664054544997257,
+      "ari_mean": 0.3204830083329874,
+      "ari_std": 0.005165409997246379
+    }
+  ],
+  "ensemble": {
+    "metrics": [
+      {
+        "method": "K-Means",
+        "n_clusters": 4,
+        "noise_fraction": 0.0,
+        "ari": 0.29539040733485195,
+        "nmi": 0.3981085115963272,
+        "purity": 0.6282,
+        "silhouette": 0.13753608870882217
+      },
+      {
+        "method": "Ансамбль",
+        "n_clusters": 4,
+        "noise_fraction": 0.0,
+        "ari": 0.29517207770598225,
+        "nmi": 0.39794545372607665,
+        "purity": 0.628,
+        "silhouette": 0.1374865782509803
+      }
+    ],
+    "pairwise_ari_mean": 0.7234588305592782,
+    "pairwise_ari_std": 0.2231056959406211
+  },
+  "kdist": {
+    "quantiles": {
+      "0.5": 1.155112308463079,
+      "0.8": 1.5281695068913728,
+      "0.9": 1.6726865771737993,
+      "0.95": 1.798495363156962,
+      "0.99": 2.084830311031327
+    },
+    "max": 3.0326259373892133
+  },
+  "dbscan_eps": [
+    {
+      "eps": 1.0,
+      "n_clusters": 121,
+      "noise_fraction": 0.45598181818181815,
+      "ari": -0.021201415573477392,
+      "nmi": 0.029244026529642937,
+      "silhouette": -0.07706327764157402
+    },
+    {
+      "eps": 1.2,
+      "n_clusters": 161,
+      "noise_fraction": 0.25663636363636366,
+      "ari": -0.01120046257744545,
+      "nmi": 0.017731934777303164,
+      "silhouette": -0.07060685249138765
+    },
+    {
+      "eps": 1.4,
+      "n_clusters": 190,
+      "noise_fraction": 0.1370909090909091,
+      "ari": -0.0042985522990658265,
+      "nmi": 0.013599757894804993,
+      "silhouette": -0.04336873806609061
+    },
+    {
+      "eps": 1.5,
+      "n_clusters": 16,
+      "noise_fraction": 0.08843636363636363,
+      "ari": 0.0072864678886086385,
+      "nmi": 0.020253115662294995,
+      "silhouette": 0.02022116494990217
+    },
+    {
+      "eps": 1.6,
+      "n_clusters": 7,
+      "noise_fraction": 0.04387272727272727,
+      "ari": 0.0031447683422807667,
+      "nmi": 0.011947691600634676,
+      "silhouette": 0.19930674197489637
+    },
+    {
+      "eps": 1.7,
+      "n_clusters": 4,
+      "noise_fraction": 0.020545454545454544,
+      "ari": 0.0010731308204266867,
+      "nmi": 0.006333624429658388,
+      "silhouette": 0.21346618565295133
+    },
+    {
+      "eps": 1.8,
+      "n_clusters": 4,
+      "noise_fraction": 0.009436363636363637,
+      "ari": 0.00034826331373550824,
+      "nmi": 0.004823476732575385,
+      "silhouette": 0.2140699774171221
+    },
+    {
+      "eps": 1.9,
+      "n_clusters": 4,
+      "noise_fraction": 0.004618181818181818,
+      "ari": 6.033185265313745e-06,
+      "nmi": 0.003699993882588349,
+      "silhouette": 0.2166019471088407
+    },
+    {
+      "eps": 2.0,
+      "n_clusters": 4,
+      "noise_fraction": 0.002290909090909091,
+      "ari": -0.0002119604674834676,
+      "nmi": 0.0032956502267118613,
+      "silhouette": 0.218175753074463
+    },
+    {
+      "eps": 2.2,
+      "n_clusters": 4,
+      "noise_fraction": 0.0006909090909090909,
+      "ari": -0.0003652349498144858,
+      "nmi": 0.0011750541727990923,
+      "silhouette": 0.21615474006499066
+    }
+  ],
+  "dbscan_grid": [
+    {
+      "min_samples": 5,
+      "eps": 1.0,
+      "n_clusters": 392,
+      "noise_fraction": 0.2780909090909091,
+      "ari": -0.01031331580416875,
+      "nmi": 0.02820187635635599,
+      "silhouette": -0.14373331020680685
+    },
+    {
+      "min_samples": 5,
+      "eps": 1.2,
+      "n_clusters": 313,
+      "noise_fraction": 0.13705454545454546,
+      "ari": -0.0034630266911605313,
+      "nmi": 0.017340380691676996,
+      "silhouette": -0.07674500686911401
+    },
+    {
+      "min_samples": 5,
+      "eps": 1.4,
+      "n_clusters": 277,
+      "noise_fraction": 0.06672727272727273,
+      "ari": -0.0007529796880223985,
+      "nmi": 0.011426845045928873,
+      "silhouette": -0.005226400624858886
+    },
+    {
+      "min_samples": 5,
+      "eps": 1.5,
+      "n_clusters": 39,
+      "noise_fraction": 0.042036363636363636,
+      "ari": 0.003381620018949598,
+      "nmi": 0.013398802288521076,
+      "silhouette": 0.04175699583575862
+    },
+    {
+      "min_samples": 5,
+      "eps": 1.6,
+      "n_clusters": 12,
+      "noise_fraction": 0.020745454545454546,
+      "ari": 0.0011504206344170158,
+      "nmi": 0.006189315543566026,
+      "silhouette": 0.1607020335912922
+    },
+    {
+      "min_samples": 5,
+      "eps": 1.7,
+      "n_clusters": 6,
+      "noise_fraction": 0.009181818181818182,
+      "ari": 0.00040047329369381833,
+      "nmi": 0.004599545999171788,
+      "silhouette": 0.20624695155657982
+    },
+    {
+      "min_samples": 5,
+      "eps": 1.8,
+      "n_clusters": 7,
+      "noise_fraction": 0.004454545454545455,
+      "ari": 7.409905594297266e-05,
+      "nmi": 0.0035592007372014832,
+      "silhouette": 0.20588535003361502
+    },
+    {
+      "min_samples": 5,
+      "eps": 2.0,
+      "n_clusters": 4,
+      "noise_fraction": 0.0011454545454545454,
+      "ari": -0.00028997967888388053,
+      "nmi": 0.001423351066164951,
+      "silhouette": 0.21762230154955164
+    },
+    {
+      "min_samples": 5,
+      "eps": 2.2,
+      "n_clusters": 4,
+      "noise_fraction": 0.00032727272727272726,
+      "ari": -0.0003798323452260341,
+      "nmi": 0.0005188090889232853,
+      "silhouette": 0.2199798373950095
+    },
+    {
+      "min_samples": 10,
+      "eps": 1.0,
+      "n_clusters": 140,
+      "noise_fraction": 0.43103636363636366,
+      "ari": -0.019928034989314346,
+      "nmi": 0.028574949744618737,
+      "silhouette": -0.10387521141579213
+    },
+    {
+      "min_samples": 10,
+      "eps": 1.2,
+      "n_clusters": 174,
+      "noise_fraction": 0.2402,
+      "ari": -0.00999202222556982,
+      "nmi": 0.017475388090627157,
+      "silhouette": -0.03604081909976874
+    },
+    {
+      "min_samples": 10,
+      "eps": 1.4,
+      "n_clusters": 197,
+      "noise_fraction": 0.12661818181818182,
+      "ari": -0.0035267771177677916,
+      "nmi": 0.01339753024185864,
+      "silhouette": -0.02625044132104738
+    },
+    {
+      "min_samples": 10,
+      "eps": 1.5,
+      "n_clusters": 14,
+      "noise_fraction": 0.0798909090909091,
+      "ari": 0.006406921635296443,
+      "nmi": 0.018422757734564327,
+      "silhouette": 0.06189626995019041
+    },
+    {
+      "min_samples": 10,
+      "eps": 1.6,
+      "n_clusters": 9,
+      "noise_fraction": 0.03921818181818182,
+      "ari": 0.0026732179325101384,
+      "nmi": 0.010698574469346401,
+      "silhouette": 0.1926172441820994
+    },
+    {
+      "min_samples": 10,
+      "eps": 1.7,
+      "n_clusters": 5,
+      "noise_fraction": 0.018163636363636364,
+      "ari": 0.0010105913110707695,
+      "nmi": 0.006330691477443747,
+      "silhouette": 0.1791661709643293
+    },
+    {
+      "min_samples": 10,
+      "eps": 1.8,
+      "n_clusters": 4,
+      "noise_fraction": 0.008636363636363636,
+      "ari": 0.0003182638222462334,
+      "nmi": 0.004824430021612409,
+      "silhouette": 0.2129644069719228
+    },
+    {
+      "min_samples": 10,
+      "eps": 2.0,
+      "n_clusters": 5,
+      "noise_fraction": 0.0020181818181818183,
+      "ari": -0.00022237545148904298,
+      "nmi": 0.003082374129374878,
+      "silhouette": 0.20527026786958408
+    },
+    {
+      "min_samples": 10,
+      "eps": 2.2,
+      "n_clusters": 4,
+      "noise_fraction": 0.0005636363636363636,
+      "ari": -0.0003704761301006756,
+      "nmi": 0.0010085657950643972,
+      "silhouette": 0.21808796631492777
+    },
+    {
+      "min_samples": 20,
+      "eps": 1.0,
+      "n_clusters": 68,
+      "noise_fraction": 0.6399454545454546,
+      "ari": -0.030367935026010717,
+      "nmi": 0.03512337123954728,
+      "silhouette": -0.027654036879548028
+    },
+    {
+      "min_samples": 20,
+      "eps": 1.2,
+      "n_clusters": 81,
+      "noise_fraction": 0.37845454545454543,
+      "ari": -0.021052147850949422,
+      "nmi": 0.019720164506854362,
+      "silhouette": 0.0029430728075531764
+    },
+    {
+      "min_samples": 20,
+      "eps": 1.4,
+      "n_clusters": 125,
+      "noise_fraction": 0.23727272727272727,
+      "ari": -0.010694056128436115,
+      "nmi": 0.013775435503891062,
+      "silhouette": -0.03231824319963644
+    },
+    {
+      "min_samples": 20,
+      "eps": 1.5,
+      "n_clusters": 8,
+      "noise_fraction": 0.15863636363636363,
+      "ari": 0.010297116701733527,
+      "nmi": 0.02014719415185675,
+      "silhouette": 0.10791765104230537
+    },
+    {
+      "min_samples": 20,
+      "eps": 1.6,
+      "n_clusters": 4,
+      "noise_fraction": 0.07972727272727273,
+      "ari": 0.005893718680853763,
+      "nmi": 0.022417402944830973,
+      "silhouette": 0.19972471956064214
+    },
+    {
+      "min_samples": 20,
+      "eps": 1.7,
+      "n_clusters": 4,
+      "noise_fraction": 0.03898181818181818,
+      "ari": 0.0026165138366282415,
+      "nmi": 0.013036303649563744,
+      "silhouette": 0.20459967184483666
+    },
+    {
+      "min_samples": 20,
+      "eps": 1.8,
+      "n_clusters": 4,
+      "noise_fraction": 0.019745454545454545,
+      "ari": 0.0008117145591300076,
+      "nmi": 0.005771275810633996,
+      "silhouette": 0.21148366940391916
+    },
+    {
+      "min_samples": 20,
+      "eps": 2.0,
+      "n_clusters": 4,
+      "noise_fraction": 0.004545454545454545,
+      "ari": -9.746175174214139e-05,
+      "nmi": 0.0036491364315890413,
+      "silhouette": 0.21547598026997566
+    },
+    {
+      "min_samples": 20,
+      "eps": 2.2,
+      "n_clusters": 4,
+      "noise_fraction": 0.0012181818181818181,
+      "ari": -0.0003485735743015239,
+      "nmi": 0.0018570727176109212,
+      "silhouette": 0.2161507892863271
+    },
+    {
+      "min_samples": 40,
+      "eps": 1.0,
+      "n_clusters": 23,
+      "noise_fraction": 0.8819454545454546,
+      "ari": -0.015094289546992462,
+      "nmi": 0.023389871625069284,
+      "silhouette": 0.05792313545092408
+    },
+    {
+      "min_samples": 40,
+      "eps": 1.2,
+      "n_clusters": 51,
+      "noise_fraction": 0.5699454545454545,
+      "ari": -0.03383483664450608,
+      "nmi": 0.03137642682600481,
+      "silhouette": 0.029727835630329606
+    },
+    {
+      "min_samples": 40,
+      "eps": 1.4,
+      "n_clusters": 69,
+      "noise_fraction": 0.36705454545454547,
+      "ari": -0.02114732343805638,
+      "nmi": 0.018699643016775066,
+      "silhouette": -0.002063300126394782
+    },
+    {
+      "min_samples": 40,
+      "eps": 1.5,
+      "n_clusters": 5,
+      "noise_fraction": 0.2774,
+      "ari": 0.021911617716449828,
+      "nmi": 0.020619506028507248,
+      "silhouette": 0.14597489286772214
+    },
+    {
+      "min_samples": 40,
+      "eps": 1.6,
+      "n_clusters": 3,
+      "noise_fraction": 0.1666,
+      "ari": 0.009460080232737993,
+      "nmi": 0.01829960973699397,
+      "silhouette": 0.20700615878860584
+    },
+    {
+      "min_samples": 40,
+      "eps": 1.7,
+      "n_clusters": 3,
+      "noise_fraction": 0.08276363636363636,
+      "ari": 0.0049968304045343165,
+      "nmi": 0.023181911679774608,
+      "silhouette": 0.2158518778842163
+    },
+    {
+      "min_samples": 40,
+      "eps": 1.8,
+      "n_clusters": 3,
+      "noise_fraction": 0.042254545454545454,
+      "ari": 0.0027996042774427483,
+      "nmi": 0.0167515622256963,
+      "silhouette": 0.2189046889519665
+    },
+    {
+      "min_samples": 40,
+      "eps": 2.0,
+      "n_clusters": 4,
+      "noise_fraction": 0.014018181818181819,
+      "ari": 0.000284488756463845,
+      "nmi": 0.004024396197522582,
+      "silhouette": 0.21205758184335546
+    },
+    {
+      "min_samples": 40,
+      "eps": 2.2,
+      "n_clusters": 4,
+      "noise_fraction": 0.0027272727272727275,
+      "ari": -0.00029835003037714233,
+      "nmi": 0.003057545550186968,
+      "silhouette": 0.2193649667563308
+    }
+  ],
+  "dbscan_noise": [
+    {
+      "contamination": 0.0,
+      "n_outliers": 0,
+      "outlier_noise_recall": NaN,
+      "original_noise_fraction": 0.004618181818181818,
+      "n_clusters": 4,
+      "ari_original": 6.033185265313745e-06,
+      "nmi_original": 0.003699993882588349
+    },
+    {
+      "contamination": 0.01,
+      "n_outliers": 550,
+      "outlier_noise_recall": 1.0,
+      "original_noise_fraction": 0.004618181818181818,
+      "n_clusters": 4,
+      "ari_original": 6.033185265313745e-06,
+      "nmi_original": 0.003699993882588349
+    },
+    {
+      "contamination": 0.05,
+      "n_outliers": 2750,
+      "outlier_noise_recall": 1.0,
+      "original_noise_fraction": 0.004618181818181818,
+      "n_clusters": 4,
+      "ari_original": 6.033185265313745e-06,
+      "nmi_original": 0.003699993882588349
+    },
+    {
+      "contamination": 0.1,
+      "n_outliers": 5500,
+      "outlier_noise_recall": 1.0,
+      "original_noise_fraction": 0.004618181818181818,
+      "n_clusters": 4,
+      "ari_original": 6.033185265313745e-06,
+      "nmi_original": 0.003699993882588349
+    }
+  ],
+  "dbscan_final": {
+    "eps": 1.9,
+    "min_samples": 11,
+    "n_clusters": 4,
+    "noise_fraction": 0.004618181818181818,
+    "ari": 6.033185265313745e-06,
+    "nmi": 0.003699993882588349,
+    "purity": 0.4014905198553319,
+    "silhouette": 0.2166019471088407
+  },
+  "hierarchical": [
+    {
+      "linkage": "average",
+      "metric": "euclidean",
+      "time": 0.010806399997818517,
+      "n_clusters": 4,
+      "sizes": [
+        16,
+        102,
+        146,
+        736
+      ],
+      "ari": 0.12018060822267561,
+      "nmi": 0.18678628604533484,
+      "silhouette": 0.1719611599774289
+    },
+    {
+      "linkage": "average",
+      "metric": "cityblock",
+      "time": 0.011349399999744492,
+      "n_clusters": 4,
+      "sizes": [
+        4,
+        116,
+        143,
+        737
+      ],
+      "ari": -0.0014479370271904303,
+      "nmi": 0.017756363680761472,
+      "silhouette": 0.19237495849582487
+    },
+    {
+      "linkage": "average",
+      "metric": "cosine",
+      "time": 0.012118300001020543,
+      "n_clusters": 4,
+      "sizes": [
+        146,
+        341,
+        120,
+        393
+      ],
+      "ari": 0.2472980523518405,
+      "nmi": 0.24890448283388375,
+      "silhouette": 0.19440944011992503
+    },
+    {
+      "linkage": "complete",
+      "metric": "euclidean",
+      "time": 0.010414500000479165,
+      "n_clusters": 4,
+      "sizes": [
+        152,
+        221,
+        70,
+        557
+      ],
+      "ari": 0.26475410704933683,
+      "nmi": 0.3531821265044769,
+      "silhouette": 0.11319993453227736
+    },
+    {
+      "linkage": "ward",
+      "metric": "euclidean",
+      "time": 0.013209399996412685,
+      "n_clusters": 4,
+      "sizes": [
+        146,
+        319,
+        415,
+        120
+      ],
+      "ari": 0.2300351932450228,
+      "nmi": 0.23713915220478196,
+      "silhouette": 0.1963642177991497
+    },
+    {
+      "linkage": "single",
+      "metric": "euclidean",
+      "time": 0.006040300002496224,
+      "n_clusters": 4,
+      "sizes": [
+        880,
+        118,
+        1,
+        1
+      ],
+      "ari": -0.0004839596027238437,
+      "nmi": 0.00814036883519927,
+      "silhouette": 0.1613388521971209
+    }
+  ],
+  "scalability": [
+    {
+      "n": 1000,
+      "time": 0.011174100000062026
+    },
+    {
+      "n": 2000,
+      "time": 0.051264199999423
+    },
+    {
+      "n": 4000,
+      "time": 0.21282700000301702
+    },
+    {
+      "n": 8000,
+      "time": 0.8936487999999372
+    },
+    {
+      "n": 16000,
+      "time": 4.040959300000395
+    }
+  ],
+  "comparison": [
+    {
+      "method": "K-Means, k=2",
+      "n_clusters": 2,
+      "noise_fraction": 0.0,
+      "ari": 0.38422491282296234,
+      "nmi": 0.4283466282669378,
+      "purity": 0.6610181818181818,
+      "silhouette": 0.1805688256225716
+    },
+    {
+      "method": "K-Means, k=4",
+      "n_clusters": 4,
+      "noise_fraction": 0.0,
+      "ari": 0.32157303562035267,
+      "nmi": 0.4065828110186225,
+      "purity": 0.6422181818181818,
+      "silhouette": 0.13820566656518207
+    },
+    {
+      "method": "DBSCAN",
+      "n_clusters": 4,
+      "noise_fraction": 0.004618181818181818,
+      "ari": 6.033185265313745e-06,
+      "nmi": 0.003699993882588349,
+      "purity": 0.4014905198553319,
+      "silhouette": 0.2166019471088407
+    },
+    {
+      "method": "Иерархическая (complete, 5000)",
+      "n_clusters": 4,
+      "noise_fraction": 0.0,
+      "ari": 0.2118097387092918,
+      "nmi": 0.2485073924313662,
+      "purity": 0.5842,
+      "silhouette": 0.1760629955122606
+    },
+    {
+      "method": "Ансамбль K-Means (5000)",
+      "n_clusters": 4,
+      "noise_fraction": 0.0,
+      "ari": 0.29517207770598225,
+      "nmi": 0.39794545372607665,
+      "purity": 0.628,
+      "silhouette": 0.1374865782509803
+    }
+  ],
+  "crosstab": {
+    "index": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "columns": [
+      "Eau de Cologne",
+      "Eau de Parfum",
+      "Eau de Toilette",
+      "Perfume Extract"
+    ],
+    "values": [
+      [
+        7164,
+        606,
+        13073,
+        1
+      ],
+      [
+        68,
+        14236,
+        6200,
+        99
+      ],
+      [
+        0,
+        2143,
+        2,
+        5274
+      ],
+      [
+        1026,
+        2269,
+        2739,
+        100
+      ]
+    ]
+  },
+  "profiles": {
+    "means": {
+      "0": {
+        "longevity_hours": 3.547648723853387,
+        "sillage_score": 3.820167914028018,
+        "top_note_count": 6.70893302629054,
+        "price_usd": 56.664446272991285,
+        "concentration_percent": 7.70085971982345,
+        "contains_alcohol": 0.8552728704296049,
+        "limited_edition": 0.0
+      },
+      "1": {
+        "longevity_hours": 6.4675129835460865,
+        "sillage_score": 6.569001601708489,
+        "top_note_count": 4.629519972819493,
+        "price_usd": 104.93976719056975,
+        "concentration_percent": 15.54880648449255,
+        "contains_alcohol": 0.8470957144990294,
+        "limited_edition": 0.0
+      },
+      "2": {
+        "longevity_hours": 10.11398975603181,
+        "sillage_score": 8.02567461922092,
+        "top_note_count": 3.437660062002965,
+        "price_usd": 210.45694738269597,
+        "concentration_percent": 25.09746461787303,
+        "contains_alcohol": 0.8598532059271569,
+        "limited_edition": 0.08087343307723413
+      },
+      "3": {
+        "longevity_hours": 5.139256602543202,
+        "sillage_score": 5.302275839582654,
+        "top_note_count": 5.564069122921421,
+        "price_usd": 84.91045904887714,
+        "concentration_percent": 12.112763286599282,
+        "contains_alcohol": 0.8551401869158879,
+        "limited_edition": 1.0
+      }
+    },
+    "sizes": {
+      "0": 20844,
+      "1": 20603,
+      "2": 7419,
+      "3": 6134
+    },
+    "dominant_class": {
+      "0": "Eau de Toilette",
+      "1": "Eau de Parfum",
+      "2": "Perfume Extract",
+      "3": "Eau de Toilette"
+    }
+  },
+  "feature_subset": [
+    {
+      "features": "Все признаки",
+      "silhouette": 0.13820566656518207,
+      "ari": 0.32157303562035267,
+      "nmi": 0.4065828110186225,
+      "purity": 0.6422181818181818
+    },
+    {
+      "features": "Без limited_edition",
+      "silhouette": 0.15300554490572704,
+      "ari": 0.3122404900864892,
+      "nmi": 0.3997655768274535,
+      "purity": 0.6393090909090909
+    },
+    {
+      "features": "Без бинарных флагов",
+      "silhouette": 0.12644404567072007,
+      "ari": 0.24734032155908664,
+      "nmi": 0.39788829988545066,
+      "purity": 0.5909090909090909
+    }
+  ],
+  "stability": {
+    "ari_vs_true_mean": 0.26331328139865023,
+    "ari_vs_true_std": 0.030275276746001646,
+    "pairwise_ari_mean": 0.7853564368008612,
+    "pairwise_ari_std": 0.28029930903475286,
+    "pairwise_ari_min": 0.4035145040461952,
+    "pairwise_ari_max": 0.9991392503209041
+  }
+}
