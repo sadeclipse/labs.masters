@@ -42,3 +42,4 @@ Important: the notebooks target Google Colab. Their first cell mounts Drive, and
 
 - Notebooks, report text, and comments are mostly in Russian; keep that language when editing them.
 - Large data files live in-tree (`data/raw/dataset.csv` ~20 MB, `tracks.csv` ~15 MB, ml CSV ~5 MB). `.gitignore` only ignores `*.pyc`, so avoid accidentally staging caches or generated experiment output.
+- Don't use long dashes in your writing, use only this one "–" 
